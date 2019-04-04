@@ -11,35 +11,37 @@ exports.createPages = ({ actions, graphql }) => {
   return new Promise((resolve, reject) => {
     const blogPostTemplate = require.resolve(`./src/templates/postsTemplate.js`)
 
-    resolve(graphql(`
-      {
-        allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___createdDate] }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              frontmatter {
-                path
+    resolve(
+      graphql(`
+        {
+          allMarkdownRemark(
+            sort: { order: DESC, fields: [frontmatter___createdDate] }
+            limit: 1000
+          ) {
+            edges {
+              node {
+                frontmatter {
+                  path
+                }
               }
             }
           }
         }
-      }
-    `).then(result => {
-      if (result.errors) {
-        return reject(result.errors)
-      }
+      `).then(result => {
+        if (result.errors) {
+          return reject(result.errors)
+        }
 
-      result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        createPage({
-          path: node.frontmatter.path,
-          component: blogPostTemplate,
-          context: {}, // additional data can be passed via context
+        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          createPage({
+            path: node.frontmatter.path,
+            component: blogPostTemplate,
+            context: {}, // additional data can be passed via context
+          })
         })
       })
-    })
-  }))
+    )
+  })
 }
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
