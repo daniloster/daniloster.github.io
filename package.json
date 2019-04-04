@@ -31,7 +31,7 @@
   ],
   "scripts": {
     "build": "CONTEXT=production gatsby build --prefix-paths",
-    "deploy": "gh-pages -d public",
+    "deploy": "gh-pages -d ./public",
     "deploy:github": "npm run build && npm run deploy",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
@@ -46,6 +46,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/daniloster/daniloster.github.io/issues"
-  },
-  "homepage": "https://github.com/daniloster/daniloster.github.io#readme"
+  }
 }
