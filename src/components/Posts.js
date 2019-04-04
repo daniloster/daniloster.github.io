@@ -6,8 +6,7 @@ import PostBrief from "./PostBrief"
 
 const PostsLayout = styled.div``
 
-const isNotProduction = process.env.CONTEXT !== "production"
-const { useMemo } = React
+const isNotProduction = process.env.NODE_ENV !== "production"
 
 function filterPosts(posts) {
   return posts

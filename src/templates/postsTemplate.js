@@ -11,7 +11,6 @@ import Subtitle from "./components/Subtitle"
 const { useMemo } = React
 
 export default function Template({ data }) {
-  console.log("postpage", data)
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
   const { component } = frontmatter

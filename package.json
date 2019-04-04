@@ -31,7 +31,7 @@
   "license": "MIT",
   "scripts": {
     "build": "CONTEXT=production gatsby build",
-    "deploy:github": "npm run build && node ./deploy-ghpages",
+    "deploy:github": "npm run build && node ./gatsby-ghpages",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
@@ -40,9 +40,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "git+https://github.com/daniloster/daniloster.github.io.git"
   }
 }
