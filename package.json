@@ -29,7 +29,6 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
   "scripts": {
     "build": "CONTEXT=production gatsby build --prefix-paths",
     "deploy": "gh-pages -d public",
@@ -43,5 +42,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/daniloster/daniloster.github.io.git"
-  }
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniloster/daniloster.github.io/issues"
+  },
+  "homepage": "https://github.com/daniloster/daniloster.github.io#readme"
 }
