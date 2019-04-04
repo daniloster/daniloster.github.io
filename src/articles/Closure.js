@@ -79,9 +79,12 @@ console.log({ userWithReadonlyUsername });
       <Subtitle>Decorators</Subtitle>
       <Paragraph>
         It is the ability of adding a behaviour to a function without changing
-        it. So, currying is an example of decoration which would return a new
-        function and some of the previous function's arguments are predefined in
-        the closure.
+        it. So,{" "}
+        <A href="https://javascript.info/currying-partials" target="_blank">
+          currying
+        </A>{" "}
+        is an example of decoration which would return a new function and some
+        of the previous function's arguments are predefined in the closure.
       </Paragraph>
       <Paragraph>
         Another classic example is creating the <b>mapDisaptchToProps</b> from
@@ -118,9 +121,10 @@ function mapDispatchToProps(dispatch) {
       <Subtitle>Given and taken</Subtitle>
       <Paragraph>
         Closures are pretty powerful but its unnecessary usage can lead to
-        problems as memory or degradign performance. Keep in mind that you are
-        creating a living context where some references are kept to be used in
-        the future by a function created from its context.
+        problems as memory leaking or degrading performance. Keep in mind that
+        you are creating a living context where some references are kept to be
+        used in the future by a function created from its context. Then, making
+        a clear flow for GC is really important.
       </Paragraph>
       <References>
         <A
@@ -134,6 +138,9 @@ function mapDispatchToProps(dispatch) {
           target="_blank"
         >
           Currying and function composition
+        </A>
+        <A href="https://javascript.info/currying-partials" target="_blank">
+          Currying and partials
         </A>
       </References>
     </div>
