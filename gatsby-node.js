@@ -4,15 +4,12 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// Wrap the require in check for window
-if (typeof window !== `undefined`) {
-  // You can delete this file if you're not using it
-  const path = require("path")
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions
 
-  exports.createPages = ({ actions, graphql }) => {
-    const { createPage } = actions
-
-    const blogPostTemplate = path.resolve(`src/templates/postsTemplate.js`)
+  // Wrap the require in check for window
+  if (typeof window !== `undefined`) {
+    const blogPostTemplate = require.resolve(`./src/templates/postsTemplate.js`)
 
     return graphql(`
       {
