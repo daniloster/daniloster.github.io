@@ -8,10 +8,10 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   // Wrap the require in check for window
-  if (typeof window !== `undefined`) {
+  return new Promise((resolve, reject) => {
     const blogPostTemplate = require.resolve(`./src/templates/postsTemplate.js`)
 
-    return graphql(`
+    resolve(graphql(`
       {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___createdDate] }
@@ -28,7 +28,7 @@ exports.createPages = ({ actions, graphql }) => {
       }
     `).then(result => {
       if (result.errors) {
-        return Promise.reject(result.errors)
+        return reject(result.errors)
       }
 
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
@@ -39,7 +39,7 @@ exports.createPages = ({ actions, graphql }) => {
         })
       })
     })
-  }
+  }))
 }
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
