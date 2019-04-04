@@ -31,8 +31,8 @@
   ],
   "scripts": {
     "build": "CONTEXT=production gatsby build --prefix-paths",
-    "deploy": "gh-pages -d ./public",
-    "deploy:github": "npm run build && npm run deploy",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d ./public -b master",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
