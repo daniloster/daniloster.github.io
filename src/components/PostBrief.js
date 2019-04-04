@@ -13,11 +13,11 @@ const PostBriefLayout = styled.div`
   display: grid;
   align-items: center;
 
-  @media (max-width: 960px) {
+  @media (max-width: 920px) {
     grid-template-columns: 100%;
     grid-template-rows: 34px 28px 20px;
   }
-  @media (min-width: 961px) {
+  @media (min-width: 921px) {
     grid-template-columns: minmax(min-content, 100%) 190px;
     grid-template-rows: 54px;
   }
