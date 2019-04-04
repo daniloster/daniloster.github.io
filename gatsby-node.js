@@ -9,8 +9,9 @@ exports.createPages = ({ actions, graphql }) => {
 
   // Wrap the require in check for window
   return new Promise((resolve, reject) => {
-    const blogPostTemplate = require.resolve(`./src/templates/postsTemplate.js`)
+    const blogPostTemplate = require.resolve(`./src/templates/PagesTemplate`)
 
+    console.log("blogPostTemplate:", blogPostTemplate)
     resolve(
       graphql(`
         {
@@ -20,8 +21,15 @@ exports.createPages = ({ actions, graphql }) => {
           ) {
             edges {
               node {
+                html
+                id
                 frontmatter {
+                  component
+                  createdDate
+                  isDraft
                   path
+                  tags
+                  title
                 }
               }
             }
@@ -36,7 +44,9 @@ exports.createPages = ({ actions, graphql }) => {
           createPage({
             path: node.frontmatter.path,
             component: blogPostTemplate,
-            context: {}, // additional data can be passed via context
+            context: {
+              page: node,
+            }, // additional data can be passed via context
           })
         })
       })

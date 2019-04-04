@@ -1,7 +1,7 @@
 ---
 title: "What is a closure?"
 path: "/posts/what-is-a-closure"
-component: "Closure"
+component: "articles/Closure"
 createdDate: 1554422400000
 isDraft: false
 tags: ["closure", "javascript", "js"]

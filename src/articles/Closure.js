@@ -4,13 +4,14 @@ import Subtitle from "../templates/components/Subtitle"
 import References from "../templates/components/References"
 import A from "../templates/components/A"
 import Code from "../templates/components/Code"
+import Html from "../templates/components/Html"
 
 const codeTheme = "prism"
 
-export default function Article({ brief }) {
+export default function Article({ html: brief }) {
   return (
     <div>
-      <div dangerouslySetInnerHTML={{ __html: brief }} />
+      <Html>{brief}</Html>
       <Paragraph>
         To understand closures completely, we need to comprehend the scopes.
         Javascript has the lexical scope (aka static scope) which is defined
