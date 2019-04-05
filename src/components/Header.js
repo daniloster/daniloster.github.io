@@ -9,6 +9,12 @@ const Title = styled.h1.attrs({ className: "cursive" })`
   width: 100%;
   height: 75px;
   margin: 0;
+  background-color: inherit;
+
+  @media (max-width: 640px) {
+    position: sticky;
+    top: 45px;
+  }
 `
 
 const Picture = styled.div`
@@ -29,10 +35,15 @@ const HeaderLayout = styled.header.attrs({ className: "monospace" })`
   position: relative;
 `
 
-const StickyLayout = styled.div.attrs({ className: "monospace" })`
+const HeaderContentLayout = styled.div.attrs({ className: "monospace" })`
   width: 100%;
-  position: sticky;
-  top: 45px;
+  position: relative;
+  background-color: inherit;
+
+  @media (min-width: 641px) {
+    position: sticky;
+    top: 45px;
+  }
 
   display: grid;
   grid-template-columns: 100%;
@@ -63,7 +74,7 @@ const StickyLayout = styled.div.attrs({ className: "monospace" })`
 export default function Header({ children, profilePicture, siteTitle }) {
   return (
     <HeaderLayout>
-      <StickyLayout>
+      <HeaderContentLayout>
         <Title>
           <Link isCursive isReverse to="/">
             {siteTitle}
@@ -76,7 +87,7 @@ export default function Header({ children, profilePicture, siteTitle }) {
         </A>
         <div />
         {children}
-      </StickyLayout>
+      </HeaderContentLayout>
     </HeaderLayout>
   )
 }

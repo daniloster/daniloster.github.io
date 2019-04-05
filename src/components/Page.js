@@ -26,28 +26,39 @@ const PageLayout = styled.div`
   position: relative;
 
   display: grid;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 100%;
+    grid-template-rows: min-content minmax(min-content, 100%) auto;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+  /* @media (min-width: 641px) {
+    grid-template-columns: minmax(min-content, 100%) 190px;
+    grid-template-rows: minmax(min-content, 100%) auto;
+  } */
+
   grid-template-columns: minmax(320px, 360px) minmax(min-content, 100%);
   grid-template-rows: minmax(min-content, 100%) auto;
   grid-template-areas:
     "header main"
     "header footer";
 
-  & ${Footer.Layout}, & ${Header.Layout}, & ${Main.Layout} {
-    padding: 15px;
-  }
-
   & ${Header.Layout} {
     grid-area: header;
-    padding-top: 45px;
+    padding: 45px 0 15px 0;
   }
 
   & ${Main.Layout} {
     grid-area: main;
-    padding-top: 45px;
+    padding: 45px 15px 15px 15px;
   }
 
   & ${Footer.Layout} {
     grid-area: footer;
+    padding: 15px;
   }
 
   color: ${getColor("default", "xdark")};
