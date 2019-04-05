@@ -1,11 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
 import loadable from "@loadable/component"
 
 import formatDate from "../utils/formatDate"
 import Page from "../components/Page"
-import SEO from "../components/seo"
 import Title from "./components/Title"
 import Subtitle from "./components/Subtitle"
 import Html from "./components/Html"
@@ -26,8 +24,7 @@ export default function PagesTemplate({ pageContext }) {
     : ({ html }) => <Html>{html}</Html>
 
   return (
-    <Page>
-      <SEO title="Page two" />
+    <Page title="Page two">
       <div className="blog-post">
         <Title>{frontmatter.title}</Title>
         <Subtitle>{formatDate(createdDate)}</Subtitle>

@@ -10,7 +10,41 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title }) {
+// href: "src/images/favicon-16x16.png",
+// href: "src/images/apple-touch-icon.png",
+// href: "src/images/favicon-32x32.png",
+const faviconsMap = {
+  "apple-touch-icon.png": {
+    rel: "apple-touch-icon",
+    sizes: "180x180",
+    href: "src/images/apple-touch-icon.png",
+  },
+  "favicon-32x32.png": {
+    rel: "icon",
+    type: "image/png",
+    sizes: "32x32",
+    href: "src/images/favicon-32x32.png",
+  },
+  "favicon-16x16.png": {
+    rel: "icon",
+    type: "image/png",
+    sizes: "16x16",
+    href: "src/images/favicon-16x16.png",
+  },
+}
+
+const { useMemo } = React
+
+function getFavIcons(images) {
+  return images
+    .filter(({ resize: { originalName } }) => faviconsMap[originalName])
+    .map(image => ({
+      ...faviconsMap[image.resize.originalName],
+      href: image.original.src,
+    }))
+}
+
+function SEO({ description, lang, meta, images, keywords, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -25,6 +59,7 @@ function SEO({ description, lang, meta, keywords, title }) {
     `
   )
 
+  const favicons = useMemo(() => getFavIcons(images), [images])
   const metaDescription = description || site.siteMetadata.description
 
   return (
@@ -34,6 +69,7 @@ function SEO({ description, lang, meta, keywords, title }) {
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
+      link={favicons}
       meta={[
         {
           name: `description`,
@@ -94,6 +130,19 @@ SEO.propTypes = {
   meta: PropTypes.arrayOf(PropTypes.object),
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      original: {
+        width: PropTypes.number,
+        height: PropTypes.number,
+        src: PropTypes.string,
+      },
+      resize: {
+        originalName: PropTypes.string,
+      },
+    })
+  ).isRequired,
 }
 
 export default SEO

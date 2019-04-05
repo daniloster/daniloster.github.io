@@ -17,6 +17,7 @@ import Header from "./Header"
 import Main from "./Main"
 import ProfilePicture from "./ProfilePicture"
 import getColor from "../templates/components/getColor"
+import SEO from "./seo"
 
 const PageLayout = styled.div`
   height: 100vh;
@@ -55,7 +56,7 @@ const PageLayout = styled.div`
   }
 `
 
-export default function Page({ children }) {
+export default function Page({ children, title, keywords }) {
   return (
     <StaticQuery
       query={graphql`
@@ -65,30 +66,44 @@ export default function Page({ children }) {
               title
             }
           }
+          allImageSharp(
+            filter: { resize: { originalName: { regex: "/icon/" } } }
+          ) {
+            nodes {
+              id
+              original {
+                width
+                height
+                src
+              }
+              resize {
+                originalName
+              }
+            }
+          }
           allFile(
             filter: { name: { eq: "profile" } }
             sort: { order: DESC, fields: [birthtimeMs] }
           ) {
-            edges {
-              node {
-                id
-                publicURL
-                name
-              }
+            nodes {
+              id
+              publicURL
+              name
             }
           }
         }
       `}
       render={data => {
-        console.log({ data })
+        const images = data.allImageSharp.nodes.map(imageSharp => imageSharp)
         return (
           <PageLayout>
+            <SEO title={title} keywords={keywords} images={images} />
             <Header
               siteTitle={data.site.siteMetadata.title}
               profilePicture={
                 <ProfilePicture
                   data-profile-picture
-                  {...data.allFile.edges[0].node}
+                  {...data.allFile.nodes[0]}
                 />
               }
             />

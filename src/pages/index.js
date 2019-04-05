@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 
 import Page from "../components/Page"
-import SEO from "../components/seo"
 import Posts from "../components/Posts"
 import getColor from "../templates/components/getColor"
 
@@ -11,8 +10,7 @@ const Title = styled.h1`
 `
 
 const IndexPage = () => (
-  <Page>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+  <Page title="Home" keywords={[`gatsby`, `application`, `react`]}>
     <Title>Posts</Title>
     <Posts />
   </Page>

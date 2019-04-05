@@ -11,7 +11,6 @@ exports.createPages = ({ actions, graphql }) => {
   return new Promise((resolve, reject) => {
     const blogPostTemplate = require.resolve(`./src/templates/PagesTemplate`)
 
-    console.log("blogPostTemplate:", blogPostTemplate)
     resolve(
       graphql(`
         {
@@ -19,18 +18,16 @@ exports.createPages = ({ actions, graphql }) => {
             sort: { order: DESC, fields: [frontmatter___createdDate] }
             limit: 1000
           ) {
-            edges {
-              node {
-                html
-                id
-                frontmatter {
-                  component
-                  createdDate
-                  isDraft
-                  path
-                  tags
-                  title
-                }
+            nodes {
+              html
+              id
+              frontmatter {
+                component
+                createdDate
+                isDraft
+                path
+                tags
+                title
               }
             }
           }
@@ -40,7 +37,7 @@ exports.createPages = ({ actions, graphql }) => {
           return reject(result.errors)
         }
 
-        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        result.data.allMarkdownRemark.nodes.forEach(node => {
           createPage({
             path: node.frontmatter.path,
             component: blogPostTemplate,
