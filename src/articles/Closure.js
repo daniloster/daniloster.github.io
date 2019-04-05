@@ -34,22 +34,14 @@ function factoryUser(username, firstname, lastname) {
   const user = {
     firstname,
     lastname,
+    getUsername: () => username;
   };
-
-  // you can define property to have seamless access
-  Object.defineProperty(user, "username", {
-    enumerable: true,
-    get: () => username,
-  });
-
-  // Or make it more explicit by creating a method
-  user.getUsername = () => username;
 
   return user;
 }
 
 const userWithReadonlyUsername = factoryUser("party@home", "Sweet", "Home");
-console.log({ userWithReadonlyUsername });
+console.log({ userWithReadonlyUsername, username: userWithReadonlyUsername.getUsername()  });
           `.trim()}
         />
       </Paragraph>
@@ -63,9 +55,9 @@ console.log({ userWithReadonlyUsername });
   userWithReadonlyUsername: {
     firstname: "Sweet",
     lastname: "Home",
-    username: "party@home",
     getUsername: [Function],
-  }
+  },
+  username: "party@home",
 }
           `.trim()}
         />
