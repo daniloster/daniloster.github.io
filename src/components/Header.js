@@ -94,7 +94,7 @@ export default function Header({ children, profilePicture, siteTitle }) {
           </Link>
         </Title>
         <Picture>{profilePicture}</Picture>
-        <Paragraph center>Lets talk about JS</Paragraph>
+        <Paragraph center>Lets talk about Web</Paragraph>
         <A href="https://twitter.com/daniloster" target="_blank">
           <i class="fa fa-twitter" />
         </A>
