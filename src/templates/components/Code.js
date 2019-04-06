@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 import { Prism as Dark } from "react-syntax-highlighter"
 import { Light } from "react-syntax-highlighter"
 import {
@@ -30,7 +31,7 @@ const HighlighterTypes = {
   twilight: props => <Dark {...props} style={twilight} />,
 }
 
-export default function Code({ extension, lang, theme, code, wrapLines }) {
+function Code({ className, extension, lang, theme, code, wrapLines }) {
   useEffect(() => {
     if (extension === "jsx") {
       SyntaxHighlighter.registerLanguage("jsx", jsx)
@@ -38,10 +39,15 @@ export default function Code({ extension, lang, theme, code, wrapLines }) {
   }, [])
   const SyntaxHighlighter = HighlighterTypes[theme]
 
-  return <SyntaxHighlighter language={lang}>{code}</SyntaxHighlighter>
+  return (
+    <SyntaxHighlighter className={className} language={lang}>
+      {code}
+    </SyntaxHighlighter>
+  )
 }
 
 Code.propTypes = {
+  className: PropTypes.string,
   code: PropTypes.string,
   extension: PropTypes.string,
   lang: PropTypes.string,
@@ -50,9 +56,15 @@ Code.propTypes = {
 }
 
 Code.defaultProps = {
+  className: "",
   code: null,
   extension: null,
   lang: "javascript",
   theme: "light",
   wrapLines: true,
 }
+
+export default styled(Code)`
+  margin-bottom: 1.45rem !important;
+  max-width: 100% !important;
+`

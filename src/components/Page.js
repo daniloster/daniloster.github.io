@@ -17,6 +17,10 @@ import Header from "./Header"
 import Main from "./Main"
 import ProfilePicture from "./ProfilePicture"
 import getColor from "../templates/components/getColor"
+import {
+  MAX_WIDTH_STACK,
+  MIN_WIDTH_COLUMNS,
+} from "../templates/components/breakpoints"
 import SEO from "./seo"
 
 const PageLayout = styled.div`
@@ -27,7 +31,7 @@ const PageLayout = styled.div`
 
   display: grid;
 
-  @media (max-width: 640px) {
+  @media (max-width: ${MAX_WIDTH_STACK}) {
     grid-template-columns: 100%;
     grid-template-rows: min-content minmax(min-content, 100%) auto;
     grid-template-areas:
@@ -35,10 +39,6 @@ const PageLayout = styled.div`
       "main"
       "footer";
   }
-  /* @media (min-width: 641px) {
-    grid-template-columns: minmax(min-content, 100%) 190px;
-    grid-template-rows: minmax(min-content, 100%) auto;
-  } */
 
   grid-template-columns: minmax(320px, 360px) minmax(min-content, 100%);
   grid-template-rows: minmax(min-content, 100%) auto;
@@ -48,12 +48,12 @@ const PageLayout = styled.div`
 
   & ${Header.Layout} {
     grid-area: header;
-    padding: 45px 0 15px 0;
+    padding: 25px 0 0 0;
   }
 
   & ${Main.Layout} {
     grid-area: main;
-    padding: 45px 15px 15px 15px;
+    padding: 25px 15px 15px 15px;
   }
 
   & ${Footer.Layout} {

@@ -25,15 +25,13 @@ export default function PagesTemplate({ pageContext }) {
 
   return (
     <Page title="Page two">
-      <div className="blog-post">
-        <Title>{frontmatter.title}</Title>
-        <Subtitle>{formatDate(createdDate)}</Subtitle>
-        {hasWindow && (
-          <React.Suspense fallback={<Subtitle>Loading...</Subtitle>}>
-            <PageComponent html={html} page={page} />
-          </React.Suspense>
-        )}
-      </div>
+      <Title>{frontmatter.title}</Title>
+      <Subtitle>{formatDate(createdDate)}</Subtitle>
+      {hasWindow && (
+        <React.Suspense fallback={<Subtitle>Loading...</Subtitle>}>
+          <PageComponent html={html} page={page} />
+        </React.Suspense>
+      )}
     </Page>
   )
 }

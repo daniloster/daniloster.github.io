@@ -7,7 +7,7 @@ const PaletteLayout = styled.div`
   align-items: center;
 
   @media (max-width: 960px) {
-    height: 40px;
+    height: 80px;
     width: 160px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(auto-fit, auto);

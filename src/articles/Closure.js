@@ -26,10 +26,9 @@ export default function Article({ html: brief }) {
         A good usage for closure is creating factories to create object with
         private variables.
       </Paragraph>
-      <Paragraph>
-        <Code
-          theme={codeTheme}
-          code={`
+      <Code
+        theme={codeTheme}
+        code={`
 function factoryUser(username, firstname, lastname) {
   const user = {
     firstname,
@@ -43,14 +42,12 @@ function factoryUser(username, firstname, lastname) {
 const userWithReadonlyUsername = factoryUser("party@home", "Sweet", "Home");
 console.log({ userWithReadonlyUsername, username: userWithReadonlyUsername.getUsername()  });
           `.trim()}
-        />
-      </Paragraph>
+      />
       <Paragraph>The output for the given example would be...</Paragraph>
-      <Paragraph>
-        <Code
-          theme={codeTheme}
-          lang="shell"
-          code={`
+      <Code
+        theme={codeTheme}
+        lang="shell"
+        code={`
 {
   userWithReadonlyUsername: {
     firstname: "Sweet",
@@ -60,8 +57,7 @@ console.log({ userWithReadonlyUsername, username: userWithReadonlyUsername.getUs
   username: "party@home",
 }
           `.trim()}
-        />
-      </Paragraph>
+      />
       <Paragraph>
         It is very important to understand the <b>lifecycle of the variable</b>{" "}
         when a closure is created. Recklessness can lead to{" "}
@@ -83,10 +79,9 @@ console.log({ userWithReadonlyUsername, username: userWithReadonlyUsername.getUs
         redux. There is a combination of <b>dispatch</b> function with the
         arguments and payload.
       </Paragraph>
-      <Paragraph>
-        <Code
-          theme={codeTheme}
-          code={`
+      <Code
+        theme={codeTheme}
+        code={`
 const increment = () => ({ type: 'INCREMENT' })
 const decrement = () => ({ type: 'DECREMENT' })
 const reset = () => ({ type: 'RESET' })
@@ -100,15 +95,14 @@ function mapDispatchToProps(dispatch) {
   };
 }
           `.trim()}
-        />
-      </Paragraph>
+      />
       <Paragraph>
         Once the <b>mapDisaptchToProps</b> is called, its scope will be
         partially retained as there is a reference to one of its variable. Yes,
         the parameters are variable to the function. Then, while the function
         created <b>increment</b>,<b>decrement</b>, <b>reset</b> are not
         collected by the CG (<i>Garbage Collector</i>), the closure will live
-        referencing the disaptch argument.
+        referencing the <b>disaptch</b> argument.
       </Paragraph>
       <Subtitle>Given and taken</Subtitle>
       <Paragraph>
