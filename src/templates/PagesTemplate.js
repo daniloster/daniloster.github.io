@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import loadable from "@loadable/component"
 
 import formatDate from "../utils/formatDate"
 import Page from "../components/Page"
@@ -20,11 +19,11 @@ export default function PagesTemplate({ pageContext }) {
 
   const hasWindow = typeof window !== "undefined"
   const PageComponent = hasWindow
-    ? loadable(() => import(`../${component}`))
+    ? React.lazy(() => import(`../${component}`))
     : ({ html }) => <Html>{html}</Html>
 
   return (
-    <Page title="Page two">
+    <Page title={frontmatter.title}>
       <Title>{frontmatter.title}</Title>
       <Subtitle>{formatDate(createdDate)}</Subtitle>
       {hasWindow && (

@@ -1,0 +1,12 @@
+{
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "__PATH_PREFIX__": false,
+    "___emitter": false
+  },
+  "rules": {
+    "sort-keys": ["error", "asc", { "caseSensitive": true, "natural": false }]
+  }
+}

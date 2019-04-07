@@ -41,7 +41,7 @@ const HeaderLayout = styled.header.attrs({ className: "monospace" })`
 
   @media (max-width: ${MAX_WIDTH_STACK}) {
     position: sticky;
-    top: calc(75px - 330px);
+    top: calc(75px - 420px);
   }
 
   @media (min-width: ${MIN_WIDTH_COLUMNS}) {
@@ -96,7 +96,7 @@ export default function Header({ children, profilePicture, siteTitle }) {
         <Picture>{profilePicture}</Picture>
         <Paragraph center>Lets talk about Web</Paragraph>
         <A href="https://twitter.com/daniloster" target="_blank">
-          <i class="fa fa-twitter" />
+          <i className="fa fa-twitter" />
         </A>
         <div />
         {children}

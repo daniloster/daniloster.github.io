@@ -19,7 +19,7 @@ const ProfileImage = styled.img`
 
 export default function ProfilePicture({ publicURL, name }) {
   return (
-    <HoverBounceFlip height="100px" width="100px" hoverTarget={ProfileImage}>
+    <HoverBounceFlip height="190px" width="190px" hoverTarget={ProfileImage}>
       <ProfileImage src={publicURL} alt={name} />
     </HoverBounceFlip>
   )

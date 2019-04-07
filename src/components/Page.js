@@ -40,7 +40,7 @@ const PageLayout = styled.div`
       "footer";
   }
 
-  grid-template-columns: minmax(320px, 360px) minmax(min-content, 100%);
+  grid-template-columns: 360px minmax(min-content, 100%);
   grid-template-rows: minmax(min-content, 100%) auto;
   grid-template-areas:
     "header main"

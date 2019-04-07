@@ -13,14 +13,16 @@ export default function Article({ html: brief }) {
     <div>
       <Html>{brief}</Html>
       <Paragraph>
-        To understand closures completely, we need to comprehend the scopes.
-        Javascript has the lexical scope (aka static scope) which is defined
-        during the compilation time.
+        To understand closures completely, we need to understand the scopes as
+        well. Javascript has the lexical scope (a.k.a. static scope) which is
+        defined during compilation time.
       </Paragraph>
       <Paragraph>
-        Walking through example seems easier to understand, then, lets get
-        started with some use cases.
+        The lexical scope is inferred in the lexical analysis performed by the
+        JS compiler. The variables and functions can only be directly referenced
+        inside the scope in which is declared.
       </Paragraph>
+      <Paragraph>See following examples.</Paragraph>
       <Subtitle>Private variable (through object factory)</Subtitle>
       <Paragraph>
         A good usage for closure is creating factories to create object with

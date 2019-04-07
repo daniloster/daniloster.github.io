@@ -6,11 +6,11 @@ import Posts from "../components/Posts"
 import Title from "../templates/components/Title"
 import getColor from "../templates/components/getColor"
 
-const IndexPage = () => (
-  <Page title="Home" keywords={[`gatsby`, `application`, `react`]}>
-    <Title>Posts</Title>
-    <Posts />
-  </Page>
-)
-
-export default IndexPage
+export default function IndexPage() {
+  return (
+    <Page title="Home" keywords={[`gatsby`, `application`, `react`]}>
+      <Title>Posts</Title>
+      <Posts />
+    </Page>
+  )
+}
