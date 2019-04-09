@@ -11,7 +11,9 @@ const PostsLayout = styled.div``
 
 export default function PostsRenderer(props) {
   const { allMarkdownRemark } = props
-  const posts = filterPosts(allMarkdownRemark.nodes)
+  const posts = useMemo(() => filterPosts(allMarkdownRemark.nodes), [
+    allMarkdownRemark,
+  ])
 
   return (
     <PostsLayout>
