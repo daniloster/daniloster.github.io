@@ -142,7 +142,7 @@ export default function Article({ html: brief }) {
         .
       </Paragraph>
       <Paragraph>
-        Before we go straight to the point (ClickOut Events), lets exercise and
+        Before we go straight to the point (ClickOut Events), let's exercise and
         strengthen some important base knowledge.
       </Paragraph>
       <Paragraph>
@@ -261,8 +261,8 @@ element.addEventListener('click', e => {
         as it can be, also, they have a bug.
       </Paragraph>
       <Paragraph>
-        Lets assume we have a dropdown panel which is open when user clicks on a
-        button and it is closed when user clicks outside.
+        Let's assume we have a dropdown panel which is open when user clicks on
+        a button and it is closed when user clicks outside.
       </Paragraph>
       <Paragraph>
         The basic idea of click out is usually implemented as below.
@@ -281,7 +281,7 @@ document.addEventListener('click', e => {
       />
       <Paragraph>
         Then, what is the problem with this? To get a crystal clear idea about
-        the problem, we need to create a bit more complex scenario. So, lets
+        the problem, we need to create a bit more complex scenario. So, let's
         imagine we have the same dropdown panel as a profile dropdown which
         allows users to select locales from a nested dropdown.
       </Paragraph>
