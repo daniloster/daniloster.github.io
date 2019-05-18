@@ -133,17 +133,17 @@ export default function Article({ html: brief }) {
     <div>
       <Html>{brief}</Html>
       <Paragraph>
-        Along the past few years, browsers have come to alignment the way the
-        DOM (Document Object Model) is treated. Thus, there is a common way to
-        add or remove event handlers,{" "}
+        Before we go straight to the point (Click Outside Events), let's
+        exercise and strengthen some important base knowledge.
+      </Paragraph>
+      <Paragraph>
+        Along the past few years, browsers unified the way the DOM (Document
+        Object Model) is treated. Thus, there is a common way to add or remove
+        event handlers,{" "}
         <A href="https://caniuse.com/#feat=addeventlistener" target="_blank">
           see reference
         </A>
         .
-      </Paragraph>
-      <Paragraph>
-        Before we go straight to the point (ClickOut Events), let's exercise and
-        strengthen some important base knowledge.
       </Paragraph>
       <Paragraph>
         Currently, most of the browsers have support to{" "}
@@ -160,14 +160,14 @@ export default function Article({ html: brief }) {
         >
           removeEventListener
         </A>
-        . Their API spec accepts an event name, handler and options which
-        contains a few properties.
+        . Their API spec accepts an event name, function handler and options
+        which contains a few properties.
       </Paragraph>
       <Subtitle>Events</Subtitle>
       <Paragraph>
         An event can be either added to an element or the document. For a better
-        undestanding, keep the console open. The events presented are added to
-        this page. See the example below.
+        learning experience through this post, keep the console open. The events
+        presented are added to this page. See the example below.
       </Paragraph>
       <Code
         theme={codeTheme}
