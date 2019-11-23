@@ -17,34 +17,31 @@ import Header from "./Header"
 import Main from "./Main"
 import ProfilePicture from "./ProfilePicture"
 import getColor from "../templates/components/getColor"
-import {
-  MAX_WIDTH_STACK,
-  MIN_WIDTH_COLUMNS,
-} from "../templates/components/breakpoints"
+import { MIN_WIDTH_COLUMNS } from "../templates/components/breakpoints"
 import SEO from "./seo"
 
 const PageLayout = styled.div`
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   overflow-y: auto;
   position: relative;
 
   display: grid;
 
-  @media (max-width: ${MAX_WIDTH_STACK}) {
-    grid-template-columns: 100%;
-    grid-template-rows: min-content minmax(min-content, 100%) auto;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer";
-  }
-
-  grid-template-columns: 360px minmax(min-content, 100%);
-  grid-template-rows: minmax(min-content, 100%) auto;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content minmax(min-content, 100%) auto;
   grid-template-areas:
-    "header main"
-    "header footer";
+    "header"
+    "main"
+    "footer";
+
+  @media (min-width: ${MIN_WIDTH_COLUMNS}) {
+    grid-template-columns: 360px minmax(1px, 100%);
+    grid-template-rows: minmax(min-content, 100%) auto;
+    grid-template-areas:
+      "header main"
+      "header footer";
+  }
 
   & ${Header.Layout} {
     grid-area: header;

@@ -165,9 +165,9 @@ export default function Article({ html: brief }) {
       </Paragraph>
       <Subtitle>Events</Subtitle>
       <Paragraph>
-        An event can be either added to an element or the document. For a better
-        learning experience through this post, keep the console open. The events
-        presented are added to this page. See the example below.
+        An event can be either added to an element or to the document. For a
+        better learning experience through this post, keep the console open. The
+        events presented are added to this page. See the example below.
       </Paragraph>
       <Code
         theme={codeTheme}

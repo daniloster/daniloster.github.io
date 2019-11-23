@@ -18,7 +18,7 @@ const PostBriefLayout = styled.div`
     grid-template-rows: 34px 28px 20px;
   }
   @media (min-width: 921px) {
-    grid-template-columns: minmax(min-content, 100%) 230px;
+    grid-template-columns: minmax(min-content, 100%) 245px;
     grid-template-rows: 54px;
 
     & ${CreatedDate} {
