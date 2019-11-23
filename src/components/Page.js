@@ -21,7 +21,7 @@ import { MIN_WIDTH_COLUMNS } from "../templates/components/breakpoints"
 import SEO from "./seo"
 
 const PageLayout = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100%;
   overflow-y: auto;
   position: relative;
