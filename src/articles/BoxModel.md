@@ -1,6 +1,6 @@
 ---
-title: "BoxModel is web layout"
-path: "/posts/box-model-is-web-layout"
+title: "BoxModel is the web layout"
+path: "/posts/box-model-is-the-web-layout"
 component: "articles/BoxModel"
 createdDate: 1574540734000
 isDraft: true
