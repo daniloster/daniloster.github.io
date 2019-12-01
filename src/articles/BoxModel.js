@@ -28,14 +28,13 @@ const Layout = styled.div`
   }
 
   .container > div {
+    /* either */
+    width: 100%;
+    /* or width: 200px; */
     background-color: green;
   }
 
   .content-box {
-    /* either */
-    width: 100%;
-    /* or width: 200px; */
-
     box-sizing: content-box;
   }
 
@@ -84,20 +83,23 @@ export default function Article({ html: brief }) {
       </Paragraph>
       <Img name="BoxModelMdn" />
       <Paragraph>
-        The box model is characterized by margin*, border, padding and content.
-        Although affecting the elements size in some scenarios, margins are
-        never within box-sizing of the elements.
+        The box model is characterized by margin*, border, padding, and content.
+        Although affecting the size of the elements in some scenarios, margins
+        are never within box-sizing of the elements.
       </Paragraph>
       <Subtitle>box-sizing</Subtitle>
       <Paragraph>
-        The box model is quite related to box-sizing. The last defines how size
-        definitions are calculated. For instance, lets assume we always have a
-        container with 200px x 200px (width x height) set position as{" "}
+        The box model is quite related to box-sizing. The last defines how the
+        definition of sizes are calculated. For instance, lets assume we always
+        have a container with 200px x 200px (width x height) set position as{" "}
         <strong>relative</strong>.
       </Paragraph>
-      <Code
-        theme={codeTheme}
-        code={`
+      <ul>
+        <li>
+          <Subtitle>box-sizing: content-box</Subtitle>
+          <Code
+            theme={codeTheme}
+            code={`
 .container {
   position: relative;
   height: 200px;
@@ -106,43 +108,17 @@ export default function Article({ html: brief }) {
 }
 
 .container > div {
+  /* either */
+  width: 100%;
+  /* or width: 200px; */
   background-color: green;
 }
 
 .content-box {
-  /* either */
-  width: 100%;
-  /* or width: 200px; */
-
   box-sizing: content-box;
 }
-
-.padded {
-  /* this means 10px each direction (top, right, bottom, left) */
-  padding: 10px;
-}
-
-.bordered {
-  /* this means 5px each direction (top, right, bottom, left) */
-  border: 5px solid red;
-}
-
-.with-margins {
-  margin: 10px;
-}
-
-.overflow {
-  overflow: auto;
-}
-
-.border-box {
-  box-sizing: border-box;
-}
           `.trim()}
-      />
-      <ul>
-        <li>
-          <Subtitle>box-sizing: content-box</Subtitle>
+          />
           <Code
             theme={codeTheme}
             code={`
@@ -160,6 +136,34 @@ export default function Article({ html: brief }) {
             The content is still within container. Good! But, what would
             happened if we added a padding or border?
           </Paragraph>
+
+          <Code
+            theme={codeTheme}
+            code={`
+.container {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
+
+.container > div {
+  /* either */
+  width: 100%;
+  /* or width: 200px; */
+  background-color: green;
+}
+
+.content-box {
+  box-sizing: content-box;
+}
+
+.padded {
+  /* this means 10px each direction (top, right, bottom, left) */
+  padding: 10px;
+}
+          `.trim()}
+          />
           <Code
             theme={codeTheme}
             code={`
@@ -183,6 +187,34 @@ export default function Article({ html: brief }) {
                 : 'Click to add "overflow: auto;" to container'}
             </button>
           </div>
+
+          <Code
+            theme={codeTheme}
+            code={`
+.container {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
+
+.container > div {
+  /* either */
+  width: 100%;
+  /* or width: 200px; */
+  background-color: green;
+}
+
+.content-box {
+  box-sizing: content-box;
+}
+
+.bordered {
+  /* this means 5px each direction (top, right, bottom, left) */
+  border: 5px solid red;
+}
+          `.trim()}
+          />
           <Code
             theme={codeTheme}
             code={`
@@ -210,11 +242,11 @@ export default function Article({ html: brief }) {
         <li>
           <Subtitle>box-sizing: border-box</Subtitle>
           <Paragraph>
-            From previous examples, there is a big lesson to take in. If a HTML
+            From previous examples, there is a big lesson to take in. If an HTML
             element has its box-sizing set to <strong>content-box</strong>{" "}
             anything changed out of the content area affects the overall size of
             the element. If the container that retains the element has{" "}
-            <strong>overflow: auto;</strong> in its styles, it may creates
+            <strong>overflow: auto;</strong> in its styles, it may create
             scrollbars.
           </Paragraph>
           <Paragraph>
@@ -223,7 +255,35 @@ export default function Article({ html: brief }) {
             only for Firefox at the moment. Then, please, don't use it.
           </Paragraph>
           <Img name="CanIUsePaddingBox" />
-          <Paragraph>Let's see how border-box manage the layout.</Paragraph>
+          <Paragraph>Let's see how border-box manages the layout.</Paragraph>
+
+          <Code
+            theme={codeTheme}
+            code={`
+.container {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
+
+.container > div {
+  /* either */
+  width: 100%;
+  /* or width: 200px; */
+  background-color: green;
+}
+
+.padded {
+  /* this means 10px each direction (top, right, bottom, left) */
+  padding: 10px;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+          `.trim()}
+          />
           <Code
             theme={codeTheme}
             code={`
@@ -252,6 +312,34 @@ export default function Article({ html: brief }) {
               scrollbars.
             </p>
           </div>
+
+          <Code
+            theme={codeTheme}
+            code={`
+.container {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
+
+.container > div {
+  /* either */
+  width: 100%;
+  /* or width: 200px; */
+  background-color: green;
+}
+
+.bordered {
+  /* this means 5px each direction (top, right, bottom, left) */
+  border: 5px solid red;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+          `.trim()}
+          />
           <Code
             theme={codeTheme}
             code={`
@@ -299,10 +387,46 @@ export default function Article({ html: brief }) {
       <Paragraph>
         The problem with margins come to the point we need to specify fixed
         sizes (different from %), even if the sum of internal elements matches
-        the container. In the examples below, we will see container and content
-        being set to <strong>width: 200px;</strong>. Still, the content which
-        has margins forces scrollbars in the container.
+        the container. In the examples below, we will see that container and
+        content are set to <strong>width: 200px;</strong>. Still, the content
+        which has margins forces scrollbars in the container.
       </Paragraph>
+      <Code
+        theme={codeTheme}
+        code={`
+.container {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
+
+.container > div {
+  /* either */
+  width: 100%;
+  /* or width: 200px; */
+  background-color: green;
+}
+
+.padded {
+  /* this means 10px each direction (top, right, bottom, left) */
+  padding: 10px;
+}
+
+.bordered {
+  /* this means 5px each direction (top, right, bottom, left) */
+  border: 5px solid red;
+}
+
+.overflow {
+  overflow: auto;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+          `.trim()}
+      />
       <Code
         theme={codeTheme}
         code={`
@@ -324,6 +448,46 @@ export default function Article({ html: brief }) {
       <Code
         theme={codeTheme}
         code={`
+.container {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
+
+.container > div {
+  /* either */
+  width: 100%;
+  /* or width: 200px; */
+  background-color: green;
+}
+
+.padded {
+  /* this means 10px each direction (top, right, bottom, left) */
+  padding: 10px;
+}
+
+.bordered {
+  /* this means 5px each direction (top, right, bottom, left) */
+  border: 5px solid red;
+}
+
+.with-margins {
+  margin: 10px;
+}
+
+.overflow {
+  overflow: auto;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+          `.trim()}
+      />
+      <Code
+        theme={codeTheme}
+        code={`
 <div class="container overflow">
   <div class="border-box padded bordered with-margins" style="width: 200px;">How am I supposed to look?</div>
 </div>
@@ -342,8 +506,16 @@ export default function Article({ html: brief }) {
       <Img name="BoxModel" />
       <Subtitle>Conclusion</Subtitle>
       <Paragraph>
-        Use <strong>box-sizing: border-box;</strong> and help building a better
-        web experience.
+        Each <strong>box-sizing</strong> has its context of problems to tackle.
+        In general, it is recommended to use{" "}
+        <strong>box-sizing: border-box;</strong> preventing side-effects in the
+        containers. Help building a better web experience.{" "}
+        <A
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"
+          target="_blank"
+        >
+          [box-sizing]
+        </A>
       </Paragraph>
       <Subtitle />
       <References>
