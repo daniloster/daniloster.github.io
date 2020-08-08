@@ -5,19 +5,18 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
+import { graphql, StaticQuery } from "gatsby"
 import PropTypes from "prop-types"
+import React from "react"
 import styled from "styled-components"
-import { StaticQuery, graphql } from "gatsby"
-import "./layout.css"
+import { MIN_WIDTH_COLUMNS } from "../templates/components/breakpoints"
+import getColor from "../templates/components/getColor"
 // import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-
 import Footer from "./Footer"
 import Header from "./Header"
+import "./layout.css"
 import Main from "./Main"
 import ProfilePicture from "./ProfilePicture"
-import getColor from "../templates/components/getColor"
-import { MIN_WIDTH_COLUMNS } from "../templates/components/breakpoints"
 import SEO from "./seo"
 
 const PageLayout = styled.div`
@@ -34,6 +33,12 @@ const PageLayout = styled.div`
     "header"
     "main"
     "footer";
+
+  
+  @media print {
+    display: block;
+    height: unset;
+  }
 
   @media (min-width: ${MIN_WIDTH_COLUMNS}) {
     grid-template-columns: 360px minmax(1px, 100%);

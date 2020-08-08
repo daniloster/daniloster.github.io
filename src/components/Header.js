@@ -1,12 +1,12 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import Link from "../templates/components/Link"
 import A from "../templates/components/A"
 import {
   MAX_WIDTH_STACK,
-  MIN_WIDTH_COLUMNS,
+  MIN_WIDTH_COLUMNS
 } from "../templates/components/breakpoints"
+import Link from "../templates/components/Link"
 
 const Title = styled.h1.attrs({ className: "cursive" })`
   display: flex;
@@ -16,6 +16,10 @@ const Title = styled.h1.attrs({ className: "cursive" })`
   height: 75px;
   margin: 0;
   background-color: inherit;
+
+  @media print {
+    display: block;
+  }
 
   @media (max-width: ${MAX_WIDTH_STACK}) {
     position: sticky;
@@ -38,6 +42,10 @@ const HeaderLayout = styled.header.attrs({ className: "monospace" })`
   background-color: #73ebdc;
   width: 100%;
   min-height: 100%;
+  
+  @media print {
+    display: block;
+  }
 
   @media (max-width: ${MAX_WIDTH_STACK}) {
     position: sticky;
@@ -52,6 +60,7 @@ const HeaderLayout = styled.header.attrs({ className: "monospace" })`
 const HeaderContentLayout = styled.div.attrs({ className: "monospace" })`
   width: 100%;
   background-color: inherit;
+  text-align: center;
 
   @media (min-width: ${MIN_WIDTH_COLUMNS}) {
     position: sticky;
@@ -64,6 +73,11 @@ const HeaderContentLayout = styled.div.attrs({ className: "monospace" })`
   grid-template-areas:
     "title"
     "profile-picture";
+
+  @media print {
+    display: block;
+    height: unset;
+  }
 
   /* align-self: center; */
   justify-content: center;

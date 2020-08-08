@@ -634,7 +634,7 @@ pre tt:after,
 pre tt:before {
   content: "";
 }
-@media only screen and (max-width: 480px) {
+@media only and (max-width: 480px) {
   html {
     font-size: 100%;
   }

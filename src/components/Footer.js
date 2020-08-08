@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import A from "../templates/components/A"
-import Palette from "../templates/components/Palette"
 import { colors } from "../templates/components/getColor"
+import Palette from "../templates/components/Palette"
 
 const Gatsby = styled.div`
   display: flex;
@@ -18,6 +18,11 @@ const FooterLayout = styled.footer.attrs({ className: "monospace" })`
   height: 70px;
   align-items: center;
   width: 100%;
+
+  @media print {
+    display: block;
+    height: unset;
+  }
 
   @media (max-width: 443px) {
     & ${Gatsby} {

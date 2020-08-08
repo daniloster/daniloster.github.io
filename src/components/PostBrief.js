@@ -1,8 +1,8 @@
-import React from "react"
 import PropTypes from "prop-types"
+import React from "react"
 import styled from "styled-components"
-import formatDate from "../utils/formatDate"
 import Link from "../templates/components/Link"
+import formatDate from "../utils/formatDate"
 
 const Title = styled.h2`
   margin: 0;
