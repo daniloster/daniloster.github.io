@@ -1,11 +1,11 @@
-import React from "react"
 import PropTypes from "prop-types"
-
-import formatDate from "../utils/formatDate"
+import React from "react"
 import Page from "../components/Page"
-import Title from "./components/Title"
-import Subtitle from "./components/Subtitle"
+import formatDate from "../utils/formatDate"
 import Html from "./components/Html"
+import Subtitle from "./components/Subtitle"
+import Title from "./components/Title"
+
 
 const { useMemo } = React
 
@@ -38,19 +38,3 @@ export default function PagesTemplate({ pageContext }) {
 PagesTemplate.propTypes = {
   pageContext: PropTypes.shape({}).isRequired,
 }
-
-// export const pageQuery = graphql`
-//   query($path: String!) {
-//     markdownRemark(frontmatter: { path: { eq: $path } }) {
-//       html
-//       frontmatter {
-//         component
-//         createdDate
-//         isDraft
-//         path
-//         tags
-//         title
-//       }
-//     }
-//   }
-// `
