@@ -598,6 +598,7 @@ function getAgeAtYear(birthdayYear, currentYear) {
         It requires quite a few pieces of knowledge. I hope to have brought the most important ones and have
         sparked your curiosity.
       </Paragraph>
+      <div id="base-knowledge" />
       <Header tag="h2">Appendix I</Header>
       <Header tag="h3">Functional vs Non-functional requirements</Header>
       <Paragraph>
