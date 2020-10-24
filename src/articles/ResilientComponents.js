@@ -644,9 +644,9 @@ function getAgeAtYear(birthdayYear, currentYear) {
       </Paragraph>
       <Paragraph>
         The software ecosystem can be seen as small modules that would comprehend 3 aspects: agents' stimulus,
-        connections (out of the domain of application), and side-effects. It is possible to group the agents'
-        stimulus and side-effects as "message exchanging" between peers where one of them is the application.
-        And the connection can be seen as the way through the messages are exchanged.
+        connections (out of the domain of application), and side-effects. It is possible to take the agent apart,
+        and group their stimulus and side-effects as "message exchanging" between peers where one of them is
+        the application. And the connection can be seen as the way through the messages are exchanged.
       </Paragraph>
       <ul>
         <li>
@@ -677,12 +677,6 @@ function getAgeAtYear(birthdayYear, currentYear) {
         allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
         sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
       />
-      <Paragraph>
-        The software ecosystem can be seen as small modules that would comprehend 3 aspects: agents' stimulus,
-        connections (out of the domain of application), and side-effects. It is possible to group the agents'
-        stimulus and side-effects as "message exchanging" between peers where one of them is the application.
-        And the connection can be seen as the way through the messages are exchanged.
-      </Paragraph>
       <Paragraph>
         In this case, the application receives a message (stimulus from the user) through browser event
         API (connection), processes it, and responds with a message to the user (side-effect to the user)
