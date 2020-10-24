@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/images/android-chrome-512x512.png"],"names":["module","exports"],"mappings":"+EAAAA,EAAOC,QAAU,IAA0B","file":"24-1288039a49531fb72713.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/android-chrome-512x512-e1842494bdb004970b1c742a908d3983.png\";"],"sourceRoot":""}

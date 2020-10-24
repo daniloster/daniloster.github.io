@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/templates/components/List.js"],"names":["styled","ul"],"mappings":"4FAAA,uBAEeA,cAAOC,GAAtB,2DAAeD,CAAf","file":"12-78d5366ddcea9caefed8.js","sourcesContent":["import styled from \"styled-components\"\n\nexport default styled.ul`\n  padding: 10px;\n`\n"],"sourceRoot":""}
