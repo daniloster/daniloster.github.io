@@ -36,7 +36,7 @@
     "build": "CONTEXT=production gatsby build --prefix-paths",
     "postbuild": "cp -Rf ./CNAME ./public/CNAME",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d ./public -b master",
+    "deploy": "gh-pages -d ./public -b gh-pages",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "clean": "rm -rf public && ((rm -rf .cache/) || (echo 'No cache to clear'))",
