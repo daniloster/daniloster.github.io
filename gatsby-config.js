@@ -8,6 +8,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        // replace `UA-XXXXXXXXX-X` with your own Google Analytics Tracking ID
+        trackingId: `G-VG33G5YQY9`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here
