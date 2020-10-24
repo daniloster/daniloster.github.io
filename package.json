@@ -34,6 +34,7 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "CONTEXT=production gatsby build --prefix-paths",
+    "postbuild": "cp -Rf ./CNAME ./public/CNAME",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d ./public -b master",
     "develop": "gatsby develop",
