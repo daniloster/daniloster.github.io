@@ -266,7 +266,7 @@ export default function Article({ html: brief }) {
       <Header tag="h3">SOLID components</Header>
       <Paragraph>
         SOLID is an acronym for <b>Single Responsibility</b>, <b>Open-Closed</b>, <b>Liskov Substitution</b>,
-        <b>Interface Segregation</b>, <b>Dependency Inversion</b>. We will now use React (functional
+        {" "}<b>Interface Segregation</b>, <b>Dependency Inversion</b>. We will now use React (functional
         components) to demonstrate how to apply these principles to your UI components by developing
         a grid.
       </Paragraph>
@@ -328,7 +328,7 @@ export default function Article({ html: brief }) {
       <Paragraph>
         This principle hints at the single responsibility, and the way to maintain is delegating
         the specificity to smaller components. The cell decorators might be changed when <i>Grid</i>
-        is called, however, they should always represent data in the end.
+        {" "}is called, however, they should always represent data in the end.
       </Paragraph>
       <Paragraph>
         Notice at the end, how <i>Ellipsis</i> is dealt with in the <i>Cell</i>.
@@ -341,7 +341,7 @@ export default function Article({ html: brief }) {
       <Paragraph>
         A classic way is a Data Layer. See how <i>Service</i> is used to fetch data in the example
         below. Changing it is a very simple task, we just need to wrap the <i>Page</i> component with
-        <i>ServiceContext.Provider</i> and define its new value. Nothing should change, the only
+        {" "}<i>ServiceContext.Provider</i> and define its new value. Nothing should change, the only
         requirement is to respect the interface of Service. In other words, the method name, arguments,
         and return should have the same "types" (contract).
       </Paragraph>
@@ -486,7 +486,7 @@ export default function Article({ html: brief }) {
         the return of useCallback to handle the error that happens in this execution.
       </Paragraph>
       <Paragraph>
-        What is not React though? CustomEvent could be dispatched bubbling up from the e.target, or straight to the
+        What if is not React though? CustomEvent could be dispatched bubbling up from the e.target, or straight to the
         body where may have a general error handler in place. Another way is creating a custom Error definition and
         append error handler to the window.
       </Paragraph>
