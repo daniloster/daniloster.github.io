@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/images/android-chrome-192x192.png"],"names":["module","exports"],"mappings":"+EAAAA,EAAOC,QAAU,IAA0B","file":"23-0794bdffd9b97cb7ed8a.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/android-chrome-192x192-c1171fd6359a46530c1da02e0ab4725e.png\";"],"sourceRoot":""}

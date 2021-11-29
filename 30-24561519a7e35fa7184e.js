@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[30],{j9b6:function(e,o){throw new Error('Module parse failed: Assigning to rvalue (1:2)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> ---\n| title: "Box model is the web layout"\n| path: "/posts/box-model-is-the-web-layout"')}}]);
-//# sourceMappingURL=30-24561519a7e35fa7184e.js.map

@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{iook:function(n,o,i){"use strict";i.r(o);var p=i("vOnD");o.default=p.a.ul.withConfig({displayName:"List",componentId:"sc-1o1ju7h-0"})(["padding:10px;"])}}]);
-//# sourceMappingURL=12-78d5366ddcea9caefed8.js.map

@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[19],{SPa8:function(o,p,n){o.exports=n.p+"static/BoxModel-3692b8179259e4111e4a54f357f3fcd8.png"}}]);
-//# sourceMappingURL=19-e08d462f3dd09baef9d4.js.map

@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[33],{"55b+":function(e,o){throw new Error('Module parse failed: Assigning to rvalue (1:2)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> ---\n| title: "What is a closure?"\n| path: "/posts/what-is-a-closure"')}}]);
-//# sourceMappingURL=33-8190d94b2837e509ce96.js.map

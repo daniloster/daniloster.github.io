@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[29],{fCgX:function(p,o,c){p.exports=c.p+"static/profile-0b9e725c1334be5f54543f2f3ac987a0.jpg"}}]);
-//# sourceMappingURL=29-c25071e147ac841a96ae.js.map

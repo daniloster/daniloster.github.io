@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[25],{SXQd:function(n,o,p){n.exports=p.p+"static/android-chrome-512x512-e1842494bdb004970b1c742a908d3983.png"}}]);
+//# sourceMappingURL=25-b98007802151d0388e0d.js.map

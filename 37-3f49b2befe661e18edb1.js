@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[37],{Acmq:function(e,n){throw new Error("Module parse failed: Unexpected token (34:13)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n| const { useState } = React;\n| const PointerWrapper = styled.div`\n>   width: 100%;\n|   position: relative;\n| `;")}}]);
+//# sourceMappingURL=37-3f49b2befe661e18edb1.js.map
