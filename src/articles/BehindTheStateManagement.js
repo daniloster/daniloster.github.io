@@ -125,13 +125,12 @@ export default function Article({ html: brief }) {
       </Paragraph>
       <Paragraph>
         Last but not least, the store should have a contract that allows you, as a developer, to replace it
-        at any time. This is the design principle for <strong>IoC (Inversion of Control)</strong>, or commonly
-        known as <strong>DI (Dependency Injection)</strong> <A href="https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898"
+        at any time. This is the design principle for <strong>DI (Dependency Injection)</strong> <A href="https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898"
           target="_blank"
         >[1]</A> <A href="https://itnext.io/dependency-injection-in-react-6fcdbd2005e6"
           target="_blank"
-        >[2]</A>. The usage of DI decouples your application from
-        the state making it way easier to replace/upgrade/test the application.
+        >[2]</A>. The usage of DI decouples your application from the state making it way easier to
+        replace/upgrade/test in the application.
       </Paragraph>
 
       <Subtitle>Implementing State Management</Subtitle>
