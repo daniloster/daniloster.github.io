@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[36],{bmi0:function(e,n){throw new Error('Module parse failed: Assigning to rvalue (1:2)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> ---\n| title: "Resilient components"\n| path: "/posts/resilient-components"')}}]);
+//# sourceMappingURL=36-55fdb6d8c86bbc728620.js.map

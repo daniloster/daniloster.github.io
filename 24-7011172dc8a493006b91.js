@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[24],{FrNQ:function(n,o,p){n.exports=p.p+"static/android-chrome-192x192-c1171fd6359a46530c1da02e0ab4725e.png"}}]);
-//# sourceMappingURL=24-7011172dc8a493006b91.js.map

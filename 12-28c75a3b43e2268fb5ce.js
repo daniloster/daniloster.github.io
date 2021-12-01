@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{B9Oc:function(n,a,i){"use strict";i.r(a);var o=i("vOnD");a.default=o.a.li.withConfig({displayName:"Item",componentId:"ar5lpr-0"})([""])}}]);
-//# sourceMappingURL=12-28c75a3b43e2268fb5ce.js.map

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/images/apple-touch-icon.png"],"names":["module","exports"],"mappings":"+EAAAA,EAAOC,QAAU,IAA0B","file":"28-f996d2ea2115cf64f820.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/apple-touch-icon-523d01fba3fa1b45db15fdfa75c46ef8.png\";"],"sourceRoot":""}

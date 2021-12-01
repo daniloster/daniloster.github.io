@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/images/BoxModel.png"],"names":["module","exports"],"mappings":"+EAAAA,EAAOC,QAAU,IAA0B","file":"22-f0bc370e642df5703326.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/BoxModel-3692b8179259e4111e4a54f357f3fcd8.png\";"],"sourceRoot":""}

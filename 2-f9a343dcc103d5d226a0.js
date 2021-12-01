@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{RXBc:function(e,t,n){"use strict";n.r(t),n.d(t,"default",(function(){return r}));var a=n("q1tI"),u=n.n(a),l=n("uVCN"),c=n("pD7v"),o=n("qIov");function r(){return u.a.createElement(l.default,{title:"Home",keywords:["gatsby","application","react"]},u.a.createElement(o.default,null,"Posts"),u.a.createElement(c.default,null))}}}]);
+//# sourceMappingURL=2-f9a343dcc103d5d226a0.js.map
