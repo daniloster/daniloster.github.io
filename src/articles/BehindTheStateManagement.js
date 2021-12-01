@@ -232,8 +232,9 @@ export class ObservableState<T> {
       />
       <Paragraph>That is our observable state created with 3 files. So, how to use it now?</Paragraph>
       <Paragraph>
-        The application needs for a state management mechanism should be defined by a contract and provided a way to
-        replace it. Typescript can help with the contract and the React.Context with the Dependency Injection.
+        The usage of the state management mechanism should be defined by a contract, and provided a way to
+        replace it. Typescript can help with the contract and the React.Context handles the replecability 
+        with the Dependency Injection.
       </Paragraph>
       <Paragraph>Contract and Dependency Injection</Paragraph>
       <Code
