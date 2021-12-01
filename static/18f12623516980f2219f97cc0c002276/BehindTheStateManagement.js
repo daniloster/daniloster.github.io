@@ -125,13 +125,12 @@ export default function Article({ html: brief }) {
       </Paragraph>
       <Paragraph>
         Last but not least, the store should have a contract that allows you, as a developer, to replace it
-        at any time. This is the design principle for <strong>IoC (Inversion of Control)</strong>, or commonly
-        known as <strong>DI (Dependency Injection)</strong> <A href="https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898"
+        at any time. This is the design principle for <strong>DI (Dependency Injection)</strong> <A href="https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898"
           target="_blank"
         >[1]</A> <A href="https://itnext.io/dependency-injection-in-react-6fcdbd2005e6"
           target="_blank"
-        >[2]</A>. The usage of DI decouples your application from
-        the state making it way easier to replace/upgrade/test the application.
+        >[2]</A>. The usage of DI decouples your application from the state making it way easier to
+        replace/upgrade/test in the application.
       </Paragraph>
 
       <Subtitle>Implementing State Management</Subtitle>
@@ -233,8 +232,9 @@ export class ObservableState<T> {
       />
       <Paragraph>That is our observable state created with 3 files. So, how to use it now?</Paragraph>
       <Paragraph>
-        The application needs to state management mechanism should define a contract and provide a way to
-        replace it. Typescript can help with the contract and the React.Context with the Dependency Injection.
+        The usage of the state management mechanism should be defined by a contract, and provided a way to
+        replace it. Typescript can help with the contract and the React.Context handles the replecability 
+        with the Dependency Injection.
       </Paragraph>
       <Paragraph>Contract and Dependency Injection</Paragraph>
       <Code
