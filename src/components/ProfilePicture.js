@@ -5,13 +5,16 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
 import PropTypes from "prop-types"
+import React from "react"
 import styled from "styled-components"
 
-import AnimateProxy from "./Animate/AnimateProxy"
-import HoverBounceFlip from "./animations/HoverBounceFlip"
 
+const ProfileImageContainer = styled.div`
+  position: relative;
+  height: ${props => props.height};
+  width: ${props => props.width};
+`
 const ProfileImage = styled.img`
   border-radius: 50%;
   box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 16px 0 rgba(0, 0, 0, 0.19);
@@ -19,13 +22,13 @@ const ProfileImage = styled.img`
 
 export default function ProfilePicture({ publicURL, name }) {
   return (
-    <HoverBounceFlip height="190px" width="190px" hoverTarget={ProfileImage}>
+    <ProfileImageContainer height="190px" width="190px">
       <ProfileImage src={publicURL} alt={name} />
-    </HoverBounceFlip>
+    </ProfileImageContainer>
   )
 }
 
-ProfilePicture.Layout = AnimateProxy
+ProfilePicture.Layout = ProfileImageContainer
 
 ProfilePicture.propTypes = {
   publicURL: PropTypes.string.isRequired,
