@@ -106,10 +106,10 @@ export default function Article({ html: brief }) {
       <Paragraph>
         Based on the requirements described before, we need to provide ways to update and get a value.
         We have seen a lot of this when studying paradigms such as OOP (Object-Oriented Programming) where
-        we used <A href="https://medium.com/javascript-scene/encapsulation-in-javascript-26be60e325b4"
+        we used <strong>encapsulation</strong> <A href="https://medium.com/javascript-scene/encapsulation-in-javascript-26be60e325b4"
         target="_blank"
-        >encapsulation</A> and discretely allowed other parts of the application
-        to <i>get</i> and <i>set</i> values under certain circumstances of scope.
+        >[1]</A> and discretely allowed other parts of the application to <i>get</i> and <i>set</i> values
+        under certain circumstances of scope.
       </Paragraph>
       <Paragraph>
         Making the Glue. Now, the application or different modules need to be notified whenever the store
