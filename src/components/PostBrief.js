@@ -15,7 +15,7 @@ const PostBriefLayout = styled.div`
 
   @media (max-width: 920px) {
     grid-template-columns: 100%;
-    grid-template-rows: 34px 28px 20px;
+    grid-template-rows: minmax(min-content, 100%) 28px 20px;
   }
   @media (min-width: 921px) {
     grid-template-columns: minmax(min-content, 100%) 245px;
